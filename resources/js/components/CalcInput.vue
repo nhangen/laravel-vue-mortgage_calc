@@ -46,7 +46,6 @@
         			values: this.values,
         		})
         		.then(function(response) {
-                    console.log(response);
         			console.log(response.data.success);
         			if (typeof(response.data.success) !== 'undefined') {
         				this.success = response.data.success;
