@@ -42,7 +42,8 @@ class CalcAjaxController extends Controller
 
     function pushDB($inputs) {
     	return DB::table('mc_values')->insert(
-        	['principal' => $inputs['values']['principal'],
+        	['uuid' => time(),
+        	'principal' => $inputs['values']['principal'],
         	'apr' => $inputs['values']['apr'],
         	'term' => $inputs['values']['term'],
         	'payment' => $inputs['values']['payment'],
