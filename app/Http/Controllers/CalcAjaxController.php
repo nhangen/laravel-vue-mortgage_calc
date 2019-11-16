@@ -17,11 +17,12 @@ class CalcAjaxController extends Controller
         if (empty($inputs)) {
         	return;
         }
-        print_r($inputs);
+
         $ip_address = $request->ip();
         $session_key = $request->session()->get('key');
         $inputs['ip_address'] = $ip_address;
         $inputs['session_key'] = $session_key;
+        return $inputs;
 
         return response()->json(['success' => $this->handleAjax($inputs)]);
     }
