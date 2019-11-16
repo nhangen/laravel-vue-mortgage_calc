@@ -10,11 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'SessionController@setSessionKey');
+Route::get('/', 'IndexController@index');
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('index');
-});
+});*/
 
 Auth::routes();
 
