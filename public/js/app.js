@@ -1886,6 +1886,7 @@ __webpack_require__.r(__webpack_exports__);
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/calc', {
         values: this.values
       }).then(function (response) {
+        console.log(response);
         console.log(response.data.success);
 
         if (typeof response.data.success !== 'undefined') {

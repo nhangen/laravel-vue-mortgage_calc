@@ -17,7 +17,7 @@ class CalcAjaxController extends Controller
         if (empty($inputs)) {
         	return;
         }
-        
+        print_r($inputs);
         $ip_address = $request->ip();
         $session_key = $request->session()->get('key');
         $inputs['ip_address'] = $ip_address;
